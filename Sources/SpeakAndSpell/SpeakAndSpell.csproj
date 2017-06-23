@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1984B837-27A3-4326-88EE-53C65A88C676}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpeakAndSpell</RootNamespace>
+    <AssemblyName>SpeakAndSpell</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Helpers\BindableObject.cs" />
+    <Compile Include="Helpers\Calculator.cs" />
+    <Compile Include="Helpers\Converters.cs" />
+    <Compile Include="Helpers\DesignPatterns\Singletons.cs" />
+    <Compile Include="Helpers\DialogCloser.cs" />
+    <Compile Include="Helpers\Enums\ConvertEnums.cs" />
+    <Compile Include="Helpers\Enums\Enums.cs" />
+    <Compile Include="Helpers\IClosableViewModel.cs" />
+    <Compile Include="Helpers\NumberToWord.cs" />
+    <Compile Include="Helpers\ObservableObject.cs" />
+    <Compile Include="Helpers\RelayCommand.cs" />
+    <Compile Include="Helpers\ServiceLocator.cs" />
+    <Compile Include="Helpers\Settings\Settings.cs" />
+    <Compile Include="Helpers\Speaker.cs" />
+    <Compile Include="Helpers\ViewModelBase.cs" />
+    <Compile Include="Model\Number.cs" />
+    <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\Services\ServiceNumber.cs" />
+    <Compile Include="Model\Services\ServiceWord.cs" />
+    <Compile Include="Model\Word.cs" />
+    <Compile Include="SettingsApp.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>SettingsApp.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\AboutScreenViewModel.cs" />
+    <Compile Include="ViewModel\Design\DesignSpeakAndMathViewModel.cs" />
+    <Compile Include="ViewModel\Design\DesignSpeakAndSpellViewModel.cs" />
+    <Compile Include="ViewModel\Interface\ISpeakAndMathViewModel.cs" />
+    <Compile Include="ViewModel\Interface\ISpeakAndSpellViewModel.cs" />
+    <Compile Include="ViewModel\To Delete\IViewInfo.cs" />
+    <Compile Include="ViewModel\To Delete\ViewModelBase.cs" />
+    <Compile Include="ViewModel\To Delete\ViewModelMain.cs" />
+    <Compile Include="ViewModel\ViewModelSpeakAndMath.cs" />
+    <Compile Include="ViewModel\ViewModelSpeakAndSpell.cs" />
+    <Compile Include="ViewModel\To Delete\ViewModelWindow1.cs" />
+    <Compile Include="View\AboutScreen.xaml.cs">
+      <DependentUpon>AboutScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SpeakAndMath.xaml.cs">
+      <DependentUpon>SpeakAndMath.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SpeakAndConjugate.xaml.cs">
+      <DependentUpon>SpeakAndConjugate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SpeakAndSong.xaml.cs">
+      <DependentUpon>SpeakAndSong.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SpeakAndRead.xaml.cs">
+      <DependentUpon>SpeakAndRead.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SpeakAndMusic.xaml.cs">
+      <DependentUpon>SpeakAndMusic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SpeakAndTranslate.xaml.cs">
+      <DependentUpon>SpeakAndTranslate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserKeyBoardSpeakAndMath-Fr.xaml.cs">
+      <DependentUpon>UserKeyBoardSpeakAndMath-Fr.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserKeyBoardSpeakAndSpell-Fr.xaml.cs">
+      <DependentUpon>UserKeyBoardSpeakAndSpell-Fr.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Helpers\Frame.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\AboutScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SpeakAndConjugate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SpeakAndSong.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SpeakAndRead.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SpeakAndMusic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SpeakAndTranslate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SpeakAndSpell.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\SpeakAndSpell.xaml.cs">
+      <DependentUpon>SpeakAndSpell.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\SpeakAndMath.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserKeyBoardSpeakAndMath-Fr.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\UserKeyBoardSpeakAndSpell-Fr.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="SettingsApp.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>SettingsApp.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\SpeakAndSpellUp.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\SpeakAndSpellDown.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\SpeakAndSpellSpeaker.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\SpeakAndSpellLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\SpeakAndSpell_Dev1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\SpeakAndSpell_Dev1.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Pictures\Yogurt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Pictures\Butter.jpg" />
+    <Resource Include="Resources\Pictures\Cheeses.jpg" />
+    <Resource Include="Resources\Pictures\Cream.jpg" />
+    <Resource Include="Resources\Pictures\CreamCheeseDessert.jpg" />
+    <Resource Include="Resources\Pictures\CreamPudding.jpg" />
+    <Resource Include="Resources\Pictures\Milk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Files\TestMotsFr.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Pictures\Goat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Apps\Aide.png" />
+    <Resource Include="Resources\Icons\Apps\btn_add.png" />
+    <Resource Include="Resources\Icons\Apps\btn_sav.png" />
+    <Resource Include="Resources\Icons\Apps\Edition_Coller.png" />
+    <Resource Include="Resources\Icons\Apps\Edition_Copier.png" />
+    <Resource Include="Resources\Icons\Apps\Edition_Couper.png" />
+    <Resource Include="Resources\Icons\Apps\Enregistrer.png" />
+    <Resource Include="Resources\Icons\Apps\Fichier_Enregistrer.png" />
+    <Resource Include="Resources\Icons\Apps\Fichier_Ouvrir.png" />
+    <Resource Include="Resources\Icons\Apps\Format_Gras.png" />
+    <Resource Include="Resources\Icons\Apps\Format_Italique.png" />
+    <Resource Include="Resources\Icons\Apps\Format_Souligne.png" />
+    <Resource Include="Resources\Icons\Apps\Gras.png" />
+    <Resource Include="Resources\Icons\Apps\Nouveau.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SpeakAndSpell" GeneratedClassName="SettingsApp">
+  <Profiles />
+  <Settings>
+    <Setting Name="paramMaxWrongTry" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="paramMaxCounterGame" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="paramMinLevel" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="paramMaxLevel" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">7</Value>
+    </Setting>
+    <Setting Name="paramMathStringmode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="paramVoiceEnglish" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Microsoft Zira Desktop</Value>
+    </Setting>
+    <Setting Name="paramVoiceFrench" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Microsoft Hortense Desktop</Value>
+    </Setting>
+    <Setting Name="paramLanguage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">French</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

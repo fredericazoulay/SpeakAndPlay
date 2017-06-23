@@ -1,0 +1,33 @@
+﻿<Window x:Class="SpeakAndSpell.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpeakAndSpell.View"
+        mc:Ignorable="d"
+        Style="{StaticResource CustomWindow}"
+        Title="MainWindow" Height="Auto" Width="300">
+    <Grid Loaded="OnLoad">
+        <!--DataContext="{DynamicResource ViewModelMain}">-->
+        <StackPanel >
+            <!--&lt; &gt;-->
+            <Button Content="Speak &amp; Spell / La dictée magique / Grillo" Background="Red" Click="Button_Click"></Button>
+            <Button Content="Speak &amp; Math" Background="Blue" Click="Button_Click"></Button>
+            <Button Content="Speak &amp; Read" Background="White" Click="Button_Click"></Button>
+            <Button Content="Speak &amp; Translate" Background="Green" Click="Button_Click"></Button>
+            <Button Content="Speak &amp; Music / La musique magique" Click="Button_Click"></Button>
+            <Button Content="Speak &amp; Song / Les paroles de chansons magiques" Click="Button_Click"></Button>
+            <Button Content="Speak &amp; Conjugate / La conjuguaison magique" Click="Button_Click"></Button>
+            <Button Content="The Little Professor" Click="Button_Click"></Button>
+            <Button Content="Simon" Click="Button_Click"></Button>
+            <Button Content="Les maths Magiques" Click="Button_Click"></Button>
+            <Button Content="Le Calcul Magique / Mathe-Fix" Click="Button_Click"></Button>
+            <Button Content="Le super livre Magique" Click="Button_Click"></Button>
+            <Button Content="DataMan" Click="Button_Click"></Button>
+            <Button Content="DataMath" Click="Button_Click"></Button>
+            <Button Content="Magic Wand Speak &amp; Learn" Click="Button_Click"></Button>
+            <Button Content="About" Click="Button_Click"></Button>
+            <Button Content="Exit application" Click="ButtonExit_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

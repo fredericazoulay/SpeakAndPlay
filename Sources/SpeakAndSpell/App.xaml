@@ -1,0 +1,180 @@
+﻿<Application x:Class="SpeakAndSpell.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SpeakAndSpell"
+             StartupUri="View\MainWindow.xaml">
+    <Application.Resources>
+
+        <!--xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"-->
+        <vm:ServiceLocator xmlns:vm="clr-namespace:SpeakAndSpell.Helpers" x:Key="ServiceLocator" />
+
+        <Style x:Key="CustomWindow" TargetType="{x:Type Window}">
+            <Setter Property="Icon" Value="./Resources/Icons/SpeakAndSpell_Dev1.ico" />
+        </Style>
+
+        <!-- Controle ToolTip -->
+        <!--<ControlTemplate x:Key="ToolTipModel" TargetType="{x:Type Button}">
+            <StackPanel Margin="5">
+                <Border CornerRadius="5" Background="Yellow" x:Name="bordure">
+                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Border>
+                <ToolTip>
+                    <StackPanel>
+                        <Label FontWeight="Bold" Background="Blue" Foreground="White">
+                            Personnalisation d'un ToolTip
+                        </Label>
+                        <TextBlock Padding="10" TextWrapping="Wrap" Width="250">
+						L'apparence des contrôles dérivés de ContentControl peut être entièrement redéfinie !
+                        </TextBlock>
+                        <Separator/>
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Image Source="..\Resources\Icons\Apps\aide.png" />
+                            <TextBlock FontWeight="Bold" Margin="5">Appuyez sur F1 pour une aide plus détaillée.</TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </ToolTip>
+        </StackPanel>
+        </ControlTemplate>-->
+        
+        <!--Styles-->
+        <Style x:Key="StyleButtonWhite">
+            <Setter Property="Button.Background" Value="White" />
+        </Style>
+        <Style x:Key="StyleButtoGreen">
+            <Setter Property="Button.Background" Value="Green" />
+        </Style>
+        <Style x:Key="StyleButtoPink">
+            <Setter Property="Button.Background" Value="Pink" />
+        </Style>
+        <Style x:Key="StyleButtonWhiteAndBlue">
+            <Setter Property="Button.Background" Value="Gray" />
+        </Style>
+        <Style x:Key="StyleButtonBlackAndWhite">
+            <Setter Property="Button.Background" Value="Black" />
+            <Setter Property="Button.Foreground" Value="White" />
+        </Style>
+        
+        <Style x:Key="StyleButtonRed">
+            <Setter Property="Button.Background" Value="Red" />
+        </Style>
+        <Style x:Key="StyleButtonYellow">
+            <Setter Property="Button.Background" Value="Yellow" />
+        </Style>
+        <Style x:Key="StyleButtonDarkOrange">
+            <Setter Property="Button.Background" Value="DarkOrange" />
+        </Style>
+        <Style x:Key="StyleButtonDarkRed">
+            <Setter Property="Button.Background" Value="DarkRed" />
+        </Style>
+
+        <Style x:Key="{x:Type ToolTip}"  TargetType="ToolTip">
+            <Setter Property="OverridesDefaultStyle"
+          Value="true" />
+            <Setter Property="HasDropShadow"
+          Value="True" />
+        </Style>
+        
+        <!--Templates-->
+        <ControlTemplate x:Key="ButtonModelRed" TargetType="{x:Type Button}">
+            <Border CornerRadius="5" Background="Red" x:Name="bordure">
+                <ContentPresenter x:Name="contentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="bordure" Property="Background" Value="White"/>
+                </Trigger>
+                <!--<EventTrigger RoutedEvent="Button.Click" SourceName="SpeakAndSpell.View.UserKeyBoardSpeakAndSpell_Fr.button_Display">
+                    --><!--<Setter Property="IsSelected" Value="True" />-->
+                    <!--<EventSetter Event="Click" Handler="button_Display"/>--><!--
+                </EventTrigger>-->
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="ButtonModelWhite" TargetType="{x:Type Button}">
+            <Border CornerRadius="5" Background="White" x:Name="bordure">
+                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="bordure" Property="Background" Value="White"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate x:Key="ButtonModelGreen" TargetType="{x:Type Button}">
+            <Border CornerRadius="5" Background="Green" x:Name="bordure">
+                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="bordure" Property="Background" Value="White"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate x:Key="ButtonModelYellow" TargetType="{x:Type Button}">
+            <Border CornerRadius="5" Background="Yellow" x:Name="bordure">
+                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="bordure" Property="Background" Value="White"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate x:Key="ButtonModelDarkOrange" TargetType="{x:Type Button}">
+            <Border CornerRadius="5" Background="DarkOrange" x:Name="bordure">
+                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="bordure" Property="Background" Value="White"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate x:Key="ButtonModelDarkRed" TargetType="{x:Type Button}">
+            <Border CornerRadius="5" Background="DarkRed" x:Name="bordure">
+                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="bordure" Property="Background" Value="White"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+
+
+        <Style x:Key="ToggleButtonStyle1" TargetType="{x:Type ToggleButton}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Button.IsDefaulted" Value="True">
+                                <Setter Property="BorderBrush" TargetName="border" Value="Red"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="#FFBEE6FD"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FF3C7FB1"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="#FFC4E5F6"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FF2C628B"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Content" TargetName="contentPresenter" Value="Bye"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" TargetName="border" Value="#FFF4F4F4"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FFADB2B5"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#FF838383"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+    </Application.Resources>
+</Application>

@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="SpeakAndSpell.View.UserKeyBoardSpeakAndSpell_Fr"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:design="clr-namespace:SpeakAndSpell.ViewModel.Design"
+             xmlns:localview="clr-namespace:SpeakAndSpell.View"
+             xmlns:localviewmodel="clr-namespace:SpeakAndSpell.ViewModel"
+             xmlns:local="clr-namespace:SpeakAndSpell.ViewModel"
+             mc:Ignorable="d" Background="Transparent" >
+
+    <d:DesignProperties.DataContext>
+        <design:DesignSpeakAndSpellViewModel />
+    </d:DesignProperties.DataContext>
+    <!--Ici on créé le véritable databinding utilisé au rutime entre la vue et le vue model-->
+    <UserControl.DataContext>
+        <local:ViewModelSpeakAndSpell />
+    </UserControl.DataContext>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        <!-- Row 0 -->
+        <Button x:Name="buttonF1" Content="F1" Grid.Row="0" Grid.Column="0" Margin="5" Template="{StaticResource ButtonModelRed}"/>
+        <Button x:Name="buttonF2" Content="{Binding Word_En}" Grid.Row="0" Grid.Column="1" Margin="5" Template="{StaticResource ButtonModelRed}"/>
+        <Button x:Name="buttonF3" Content="F3" Grid.Row="0" Grid.Column="2" Margin="5" Template="{StaticResource ButtonModelRed}"/>
+        <Button x:Name="buttonF4" Content="F4" Grid.Row="0" Grid.Column="3" Margin="5" Template="{StaticResource ButtonModelRed}"/>
+        <Button x:Name="buttonF5" Content="F5" Grid.Row="0" Grid.Column="4" Margin="5" Template="{StaticResource ButtonModelRed}"/>
+        <Button x:Name="buttonF6" Content="F6" Grid.Row="0" Grid.Column="5" Margin="5" Template="{StaticResource ButtonModelRed}"/>
+        <Button x:Name="buttonF7" Content="F7" Grid.Row="0" Grid.Column="6" Margin="5" Template="{StaticResource ButtonModelRed}"/>
+        <Button x:Name="buttonF8" Content="F8" Grid.Row="0" Grid.Column="7" Margin="5" Template="{StaticResource ButtonModelRed}"/>
+        <Button x:Name="buttonF9" Content="F9" Grid.Row="0" Grid.Column="8" Margin="5" Template="{StaticResource ButtonModelRed}"/>
+        <Button x:Name="buttonF0" Content="F0" Grid.Row="0" Grid.Column="9" Margin="5" Template="{StaticResource ButtonModelRed}"/>
+        <!-- Row 1 -->
+        <Button x:Name="buttonA" Content="A" Grid.Row="1" Grid.Column="0" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonYellow}" />
+        <Button x:Name="buttonB" Content="B" Grid.Row="1" Grid.Column="1" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkOrange}" />
+        <Button x:Name="buttonC" Content="C" Grid.Row="1" Grid.Column="2" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkOrange}" />
+        <Button x:Name="buttonD" Content="D" Grid.Row="1" Grid.Column="3" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <Button x:Name="buttonE" Content="E" Grid.Row="1" Grid.Column="4" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonYellow}"/>
+        <Button x:Name="buttonF" Content="F" Grid.Row="1" Grid.Column="5" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <Button x:Name="buttonG" Content="G" Grid.Row="1" Grid.Column="6" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <Button x:Name="buttonH" Content="H" Grid.Row="1" Grid.Column="7" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <Button x:Name="buttonI" Content="I" Grid.Row="1" Grid.Column="8" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonYellow}"/>
+        <Button x:Name="buttonJ" Content="J" Grid.Row="1" Grid.Column="9" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <!-- Row 2 -->
+        <Button x:Name="buttonK" Content="K" Grid.Row="2" Grid.Column="0" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <Button x:Name="buttonL" Content="L" Grid.Row="2" Grid.Column="1" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <Button x:Name="buttonM" Content="M" Grid.Row="2" Grid.Column="2" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <Button x:Name="buttonN" Content="N" Grid.Row="2" Grid.Column="3" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <Button x:Name="buttonO" Content="O" Grid.Row="2" Grid.Column="4" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonYellow}"/>
+        <Button x:Name="buttonP" Content="P" Grid.Row="2" Grid.Column="5" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <Button x:Name="buttonQ" Content="Q" Grid.Row="2" Grid.Column="6" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <Button x:Name="buttonR" Content="R" Grid.Row="2" Grid.Column="7" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <Button x:Name="buttonS" Content="S" Grid.Row="2" Grid.Column="8" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <Button x:Name="buttonT" Content="T" Grid.Row="2" Grid.Column="9" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <!-- Row 3 -->         
+        <Button x:Name="buttonU" Content="U" Grid.Row="3" Grid.Column="0" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonYellow}"/>
+        <Button x:Name="buttonV" Content="V" Grid.Row="3" Grid.Column="1" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <Button x:Name="buttonW" Content="W" Grid.Row="3" Grid.Column="2" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <Button x:Name="buttonX" Content="X" Grid.Row="3" Grid.Column="3" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <Button x:Name="buttonY" Content="Y" Grid.Row="3" Grid.Column="4" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <Button x:Name="buttonZ" Content="Z" Grid.Row="3" Grid.Column="5" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <Button x:Name="button1" Content="'" Grid.Row="3" Grid.Column="6" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkRed}"/>
+        <Button x:Name="button2" Content="#" Grid.Row="3" Grid.Column="7" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkRed}"/>
+        <Button x:Name="button3" Content="\" Grid.Row="3" Grid.Column="8" Margin="5" Command="{Binding PressClickCommand}" Style="{StaticResource StyleButtonDarkRed}"/>
+        <Button x:Name="buttonEnter" Content="*" Grid.Row="3" Grid.Column="9" Margin="5" Background="DarkRed" Click="buttonEnter_Click"/>
+    </Grid>
+</UserControl>

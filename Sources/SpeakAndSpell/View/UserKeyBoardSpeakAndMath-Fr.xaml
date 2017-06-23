@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="SpeakAndSpell.View.UserKeyBoardSpeakAndMath_Fr"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SpeakAndSpell.View"
+             mc:Ignorable="d" Background="Transparent" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!-- Row 0 -->
+        <Button x:Name="button_Repeate" Content="Repeate" Grid.Row="0" Grid.Column="0" Margin="5" Template="{StaticResource ButtonModelDarkOrange}"/>
+        <!--<Button x:Name="buttonF2" Content="F2" Grid.Row="0" Grid.Column="1" Margin="5" Template="{StaticResource ButtonModelRed}"/>-->
+        <Button x:Name="button_7" Content="7" Grid.Row="0" Grid.Column="2" Margin="5" Template="{StaticResource ButtonModelWhite}"/>
+        <Button x:Name="button_8" Content="8" Grid.Row="0" Grid.Column="3" Margin="5" Template="{StaticResource ButtonModelWhite}"/>
+        <Button x:Name="button_9" Content="9" Grid.Row="0" Grid.Column="4" Margin="5" Template="{StaticResource ButtonModelWhite}"/>
+        <Button x:Name="button_Divide" Content="/" Grid.Row="0" Grid.Column="5" Margin="5" Template="{StaticResource ButtonModelYellow}"/>
+        <!--<Button x:Name="buttonF7" Content="F7" Grid.Row="0" Grid.Column="6" Margin="5" Template="{StaticResource ButtonModelRed}"/>-->
+        <!--<Button x:Name="buttonF8" Content="F8" Grid.Row="0" Grid.Column="7" Margin="5" Template="{StaticResource ButtonModelRed}"/>-->
+        <Button x:Name="button_WordProblems" Content="Word Problems" Grid.Row="0" Grid.Column="8" Margin="5" Template="{StaticResource ButtonModelDarkOrange }"/>
+        <Button x:Name="button_On" Content="ON" Grid.Row="0" Grid.Column="9" Margin="5" Template="{StaticResource ButtonModelGreen}"/>
+        <!-- Row 1 -->
+        <Button x:Name="buttonA" Content="&gt;" Grid.Row="1" Grid.Column="0" Margin="5" Style="{StaticResource StyleButtonDarkOrange}" />
+        <!--<Button x:Name="buttonB" Content="B" Grid.Row="1" Grid.Column="1" Margin="5" Style="{StaticResource StyleButtonDarkOrange}" />-->
+        <Button x:Name="button_4" Content="4" Grid.Row="1" Grid.Column="2" Margin="5" Style="{StaticResource StyleButtonWhite}" />
+        <Button x:Name="button_5" Content="5" Grid.Row="1" Grid.Column="3" Margin="5" Style="{StaticResource StyleButtonWhite}"/>
+        <Button x:Name="button_6" Content="6" Grid.Row="1" Grid.Column="4" Margin="5" Style="{StaticResource StyleButtonWhite}"/>
+        <Button x:Name="button_Times" Content="*" Grid.Row="1" Grid.Column="5" Margin="5" Style="{StaticResource StyleButtonYellow}"/>
+        <!--<Button x:Name="buttonG" Content="G" Grid.Row="1" Grid.Column="6" Margin="5" Style="{StaticResource StyleButtonDarkOrange}"/>-->
+        <!--<Button x:Name="buttonH" Content="H" Grid.Row="1" Grid.Column="7" Margin="5" Style="{StaticResource StyleButtonDarkOrange}"/>-->
+        <Button x:Name="button_LessGreater" Content="Greater / Less" Grid.Row="1" Grid.Column="8" Margin="5" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <Button x:Name="button_Off" Content="OFF" Grid.Row="1" Grid.Column="9" Margin="5" Style="{StaticResource StyleButtonRed}"/>
+        <!-- Row 2 -->
+        <Button x:Name="button_Less" Content="&lt;" Grid.Row="2" Grid.Column="0" Margin="5" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <!--<Button x:Name="buttonL" Content="L" Grid.Row="2" Grid.Column="1" Margin="5" Style="{StaticResource StyleButtonDarkOrange}"/>-->
+        <Button x:Name="button_1" Content="1" Grid.Row="2" Grid.Column="2" Margin="5" Style="{StaticResource StyleButtonWhite}"/>
+        <Button x:Name="button_2" Content="2" Grid.Row="2" Grid.Column="3" Margin="5" Style="{StaticResource StyleButtonWhite}"/>
+        <Button x:Name="button_3" Content="3" Grid.Row="2" Grid.Column="4" Margin="5" Style="{StaticResource StyleButtonWhite}"/>
+        <Button x:Name="button_Minus" Content="-" Grid.Row="2" Grid.Column="5" Margin="5" Style="{StaticResource StyleButtonYellow}"/>
+        <!--<Button x:Name="buttonQ" Content="Q" Grid.Row="2" Grid.Column="6" Margin="5" Style="{StaticResource StyleButtonDarkOrange}"/>-->
+        <!--<Button x:Name="buttonR" Content="R" Grid.Row="2" Grid.Column="7" Margin="5" Style="{StaticResource StyleButtonDarkOrange}"/>-->
+        <Button x:Name="button_WriteIt" Content="Write it" Grid.Row="2" Grid.Column="8" Margin="5" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <Button x:Name="button_Go" Content="GO" Grid.Row="2" Grid.Column="9" Margin="5" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <!-- Row 3 -->
+        <Button x:Name="button_Clear" Content="Clear" Grid.Row="3" Grid.Column="0" Margin="5" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <!--<Button x:Name="buttonV" Content="V" Grid.Row="3" Grid.Column="1" Margin="5" Style="{StaticResource StyleButtonDarkOrange}"/>-->
+        <Button x:Name="button_0" Content="0" Grid.Row="3" Grid.Column="2" Margin="5" Style="{StaticResource StyleButtonWhite}"/>
+        <Button x:Name="button_Point" Content="." Grid.Row="3" Grid.Column="3" Margin="5" Style="{StaticResource StyleButtonYellow}"/>
+        <Button x:Name="button_MixIt" Content="Mix it" Grid.Row="3" Grid.Column="4" Margin="5" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <Button x:Name="button_Plus" Content="+" Grid.Row="3" Grid.Column="5" Margin="5" Style="{StaticResource StyleButtonYellow}"/>
+        <!--<Button x:Name="button1" Content="'" Grid.Row="3" Grid.Column="6" Margin="5" Style="{StaticResource StyleButtonDarkRed}"/>-->
+        <!--<Button x:Name="button2" Content="#" Grid.Row="3" Grid.Column="7" Margin="5" Style="{StaticResource StyleButtonDarkRed}"/>-->
+        <Button x:Name="button_NumberStumper" Content="Number Stumper" Grid.Row="3" Grid.Column="8" Margin="5" Style="{StaticResource StyleButtonDarkOrange}"/>
+        <Button x:Name="button_Enter" Content="Enter" Grid.Row="3" Grid.Column="9" Margin="5" Style="{StaticResource StyleButtonDarkOrange}"/>
+
+    </Grid>
+</UserControl>
